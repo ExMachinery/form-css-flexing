@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epic form</title>
+    <link rel="stylesheet" href="epic-form-style.css" />
+  </head>
+  <body>
+    <div class="left-side"></div>
+    <div class="left-content">
+      <div class="logo">
+        <img id="odin-logo" src="odin-lined.png" alt="odin project logo" />
+        <p class="logo-text">ODIN</p>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="top">
+        <p class="title">
+          Form is a vessel for substance. A weak form cannot contain the
+          powerful flow of an authentic identity rich in meaning. Weak substance
+          is strengthened and evolves within a strong form.
+        </p>
+        <p class="title">That is why form is just as important as content.</p>
+      </div>
+      <form action="test.com" method="post" id="this-form">
+        <div id="form-div">
+          <p>
+            <label for="f_name"
+              >First name
+              <input
+                type="text"
+                name="f_name"
+                id="f_name"
+                placeholder="Bob"
+                minlength="2"
+                maxlength="20"
+                required
+              />
+            </label>
+          </p>
+          <p>
+            <label for="l_name"
+              >Last name
+              <input
+                type="text"
+                name="l_name"
+                id="l_name"
+                placeholder="Marley"
+                minlength="2"
+                maxlength="20"
+                required
+              />
+            </label>
+          </p>
+          <p>
+            <label for="email"
+              >Email
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="your_email@domain.com"
+                pattern="^[^@]+@[^@]+\.[^@]+$"
+                required
+              />
+            </label>
+          </p>
+          <p>
+            <label for="phone"
+              >Phone number
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="11-digit number"
+                pattern="[0-9]{11}"
+              />
+            </label>
+          </p>
+          <p>
+            <label for="psw"
+              >Password
+              <input
+                type="password"
+                name="psw"
+                id="psw"
+                minlength="8"
+                required
+              />
+            </label>
+          </p>
+          <p>
+            <label for="psw_conf"
+              >Confirm password
+              <input
+                type="password"
+                name="psw_conf"
+                id="psw_conf"
+                minlength="8"
+                required
+              />
+            </label>
+          </p>
+        </div>
+        <div id="empty-div"></div>
+      </form>
+      <div class="footer">
+        <button type="submit" form="this-form">Become strong</button>
+        <p class="footer-text">
+          Already strong? <a href="login.form.com">Log in!</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

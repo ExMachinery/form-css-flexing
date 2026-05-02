@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse.woff2') format('woff2'),
+        url('fonts/Norse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse-Bold.woff2') format('woff2'),
+        url('fonts/Norse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('fonts/Spectral-Regular.woff2') format('woff2'),
+        url('fonts/Spectral-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Normalize */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input {
+    appearance: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+/* Normalize END */
+
+:root {
+    --form-height: 724px;
+    --form-width: 473px;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1px;
+    margin: 50px 200px;
+    background: linear-gradient(90deg, #fafafa 35%, #050505 100%);
+}
+
+.left-content {
+    display: flex;
+    box-sizing: border-box;
+    width: var(--form-width);
+    height: var(--form-height);
+    background: white url(odin5.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    top: 629px;
+    left: 63px;
+    max-height: 72px;
+    width: 345px;
+    background-color: rgba(36, 28, 28, 0.993);
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+#odin-logo {
+    height: 80px;
+    padding: 10px;
+}
+
+.logo-text {
+    font-family: "Norse";
+    color: white;
+    font-size: 4.5rem;
+}
+
+.left-side {
+    width: var(--form-width);
+    height: var(--form-height);
+    flex: none;
+}
+
+.right-side {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 724px;
+    min-height: 724px;
+    min-width: 580px;
+    padding: 10px;
+}
+
+.top,
+.footer,
+form {
+    border: 2px, solid, rgb(206, 196, 196);
+    border-radius: 6px;
+    box-shadow: black 1px 1px 5px 4px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.title,
+label,
+.footer-text {
+    font-family: "Spectral";
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.title {
+    margin-left: 10px;
+    max-width: 900px;
+}
+
+form {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#form-div {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+}
+
+#empty-div {
+    display: flex;
+    flex: 1;
+    width: 600px;
+    flex-shrink: 1;
+}
+
+p:not(.title, .logo-text) {
+    display: flex;
+    flex: auto;
+    min-width: 260px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 150px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid rgb(54, 53, 53);
+    border-radius: 4px;
+    background-color: wheat;
+}
+
+input:focus {
+    outline: none;
+    background-color: rgb(235, 194, 119);
+}
+
+input:user-valid {
+    border: 3px, solid, rgb(0, 0, 0);
+}
+
+input:user-invalid {
+    border: 3px, solid, rgb(176, 4, 245)
+}
+
+button {
+    font-family: "Norse";
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 200px;
+    border: 2px solid rgb(54, 53, 53);
+    border-radius: 4px;
+    background-color: wheat;
+}
+
+button:hover {
+    background-color: rgb(235, 194, 119);
+}
+
+a {
+    padding-left: 5px;
+}
